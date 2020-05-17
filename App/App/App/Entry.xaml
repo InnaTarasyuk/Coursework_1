@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.Entry"
+             Title="Приложение для заводчиков собак"
+             BackgroundColor="#ffffff"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Margin" Value="8,8,0,8"/>
+            </Style>
+            <Color x:Key="Color">Black</Color>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Key=Color}" />
+                <Setter Property="BackgroundColor" Value="#ffbdbd" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <TableView>
+                <TableView.Root>
+                    <TableRoot>
+                        <TableSection Title="Персональные данные" >
+                            <EntryCell x:Name ="loginEntry" Label="Логин" LabelColor="Black" Keyboard="Default" Placeholder="Введите логин" />
+                            <EntryCell x:Name ="passwordEntry" Label="Пароль" LabelColor="Black" Keyboard="Default" Placeholder="Введите пароль"/>
+                            <!--<SwitchCell Text="Сохранить" />-->
+
+                        </TableSection>
+                    </TableRoot>
+                </TableView.Root>
+            </TableView>
+            <!--<StackLayout Orientation="Horizontal">
+                <Label Text="Логин:"/>
+                <Entry x:Name="Login" Placeholder="Введите логин"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Пароль"/>
+                <Entry x:Name="Password" IsPassword="true" Placeholder="Введите пароль"/>
+            </StackLayout>-->
+
+            <Image WidthRequest="100" HeightRequest="100" Margin="70" Aspect="AspectFit" Source="pets.png"></Image>
+            <Button Text="Войти" Clicked="Entry_Clicked"></Button>
+            <Button Text="Зарегистрироваться" Clicked="Auth_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

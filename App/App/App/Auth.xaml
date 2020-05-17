@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.Auth">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Margin" Value="8,8,0,8"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+            <Color x:Key="Color">Black</Color>
+            <Style TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Key=Color}" />
+                <Setter Property="BackgroundColor" Value="#ffbdbd" />
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="CornerRadius" Value="8" />
+                <Setter Property="HeightRequest" Value="48" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="FillAndExpand" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <!--<TableView>
+                <TableView.Root>
+                    <TableRoot>
+                        <TableSection Title="Персональные данные" >
+                            <EntryCell x:Name ="name" Label="Имя пользователя" LabelColor="Black" Keyboard="Default" Placeholder="Введите имя"/>
+                            <EntryCell x:Name ="loginEntry" Label="Логин" LabelColor="Black" Keyboard="Default" Placeholder="Введите логин"/>
+                            <EntryCell x:Name ="passwordEntry" Label="Пароль" LabelColor="Black" Keyboard="Default" Placeholder="Введите пароль"/>
+                            <EntryCell x:Name ="passwordConfirmEntry" Label="Пароль" LabelColor="Black" Keyboard="Default" Placeholder="Подтвердить пароль"/>
+                            <EntryCell x:Name ="phone" Label="Телефон" LabelColor="Black" Keyboard="Default" Placeholder="Введите телефон"/>
+
+                        </TableSection>
+                    </TableRoot>
+                </TableView.Root>
+            </TableView>-->
+            <Frame CornerRadius="8" Margin="16">
+                <StackLayout  BackgroundColor="White">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Имя пользователя"/>
+                        <Entry x:Name="Name" Placeholder="Введите имя"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Логин"/>
+                        <Entry x:Name="LoginEntry" Placeholder="Введите логин" Keyboard="Default" TextChanged="Login_Changed"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Пароль"/>
+                        <Entry x:Name="PasswordEntry" Keyboard="Default" Placeholder="Введите пароль"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Пароль"/>
+                        <Entry x:Name="PasswordConfirmEntry" Keyboard="Default" Placeholder="Подтвердитe пароль"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Телефон"/>
+                        <Entry x:Name="Phone" Keyboard="Telephone" Placeholder="Введите телефон" TextChanged="Phone_Changed"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Зарегистрироваться" Clicked="Auth_Click"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

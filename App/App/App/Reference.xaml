@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.Reference"
+             Title="Справка">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Margin" Value="8,8,0,8"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame CornerRadius="8" Margin="16">
+                <StackLayout  BackgroundColor="White">
+                    <Label Text="Инструкция по работе с приложением:
+                   
+                   Для просмотра профиля необходимо нажать на кнопку Мой профиль. Вам доступны два поля для изменения - телефон и имя. Логин изменению не подлежит."
+                           VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                    <Label Text= "Для размещения объявления о собаке необходимо перейти на страницу Мой питомец."
+                           VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                    <Label Text= "Для поиска собаки перейдите на страницу Поиск собаки. Вы можете указать те характеристики, которые вас интересуют. Приложение отобразит список подходящих вашим интересам собак."
+                    VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+                    <Label Text= "Спасибо, что используете наше приложение!
+                   "
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

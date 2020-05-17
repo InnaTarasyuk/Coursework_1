@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.MasterDetailPage1"
+             xmlns:pages="clr-namespace:App"
+                  Title="Master">
+    <MasterDetailPage.Master>
+
+        <!--<pages:MasterDetailPage1Master x:Name="MasterPage" />-->
+        <ContentPage Title="App" BackgroundColor="#ffbdbd">
+            <ContentPage.Resources>
+                <ResourceDictionary>
+                    <Style TargetType="Label">
+                        <Setter Property="TextColor" Value="Black"/>
+                        <Setter Property="FontSize" Value="Medium"/>
+                        <Setter Property="Margin" Value="8,8,0,8"/>
+                    </Style>
+                    <Color x:Key="Color">Black</Color>
+                    <Style TargetType="Button">
+                        <Setter Property="TextColor" Value="{StaticResource Key=Color}" />
+                        <Setter Property="BackgroundColor" Value="#e1f7d5" />
+                        <Setter Property="FontSize" Value="Medium" />
+                        <Setter Property="CornerRadius" Value="8" />
+                        <Setter Property="HeightRequest" Value="48" />
+                        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+                    </Style>
+                </ResourceDictionary>
+            </ContentPage.Resources>
+            <ContentPage.Content>
+                <StackLayout Padding="10,30,5,5">
+                    <StackLayout Orientation="Horizontal" >
+                        <Label Text="Пользователь" VerticalOptions="Center" FontSize="Large"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Clicked="BtnSettings_Click" Text="Профиль пользователя"></Button>
+                        <Image WidthRequest="45" HeightRequest="45" Aspect="AspectFit" Source="profile.png" ></Image>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Мой питомец" Clicked="BtnProfile_Click"></Button>
+                        <Image WidthRequest="45" HeightRequest="45" Aspect="AspectFit" Source="pet.png" ></Image>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Поиск собаки" Clicked="BtnFind_Click"></Button>
+                        <Image WidthRequest="45" HeightRequest="45" Aspect="AspectFit" Source="search.png" ></Image>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Button Text="Справка" Clicked="BtnReference_Click"></Button>
+                        <Image WidthRequest="45" HeightRequest="45" Aspect="AspectFit" Source="preferences.png" ></Image>
+                    </StackLayout>
+                    
+                  
+                   
+                    
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <!--<pages:MasterDetailPage1Detail />-->
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

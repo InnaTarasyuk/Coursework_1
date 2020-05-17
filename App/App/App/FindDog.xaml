@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.FindDog"
+             Title="Поиск">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Margin" Value="8,8,0,8"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+
+                <Frame CornerRadius="8" Margin="16">
+                    <StackLayout  BackgroundColor="White">
+                        <StackLayout>
+                            <Label Text="Найти собаку"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Порода:"/>
+                            <Entry x:Name="Breed"/>
+                        </StackLayout>
+                        <StackLayout Orientation ="Horizontal" >
+                            <Label Text="Мин.вес(в кг):"/>
+                            <Entry x:Name="WeightMin" Keyboard="Numeric"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Макс.вес(в кг):"/>
+                            <Entry x:Name="WeightMax" Keyboard="Numeric"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Мин.возраст:"/>
+                            <Entry x:Name="AgeMin" Keyboard="Numeric"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Макс.возраст:"/>
+                            <Entry x:Name="AgeMax" Keyboard="Numeric"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Выберите пол:"/>
+                            <Picker x:Name="Picker1" Margin="8,0">
+                                <Picker.Items>
+                                    <x:String>Женский</x:String>
+                                    <x:String>Мужской</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                        <StackLayout>
+                            <!--<ImageButton
+                                Source="send.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="EndAndExpand"
+                                WidthRequest="45"
+                                HeightRequest="45"
+                                Clicked="Find_Click"
+                           />-->
+
+                            <Button Text="Найти" 
+                                BackgroundColor="#f1cbff" CornerRadius="8" TextColor="White" HorizontalOptions="End"
+                                VerticalOptions="EndAndExpand" HeightRequest="48" Clicked="Find_Click"/>
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

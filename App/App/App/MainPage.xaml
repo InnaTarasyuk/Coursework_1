@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.MainPage"
+                  Title=" App ">
+    <!--<MasterDetailPage.Master>
+        <ContentPage Title="App" BackgroundColor="Coral">
+            <ContentPage.Content>
+                <StackLayout Padding="5,30,5,5">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        --><!--<Image WidthRequest="65" HeightRequest="65" Aspect="AspectFit" VerticalOptions="Center"></Image>--><!--
+                        <Label Text="User" VerticalOptions="Center"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        --><!--<Image WidthRequest="24" HeightRequest="24" Aspect="AspectFit"></Image>--><!--
+                        <Button Text="Настройки" Clicked="btnSettings_Click"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Button Text="Справка" Clicked="btnReference_Click"></Button>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Button Text="Профиль пользователя" Clicked="btnProfile_Click"></Button>
+                        --><!--<TableView>
+                            <TableView.Root>
+                                <TableRoot>
+                                    <TableSection Title="Персональные данные">
+                                        <EntryCell Label="Логин" Keyboard="Default" Placeholder="Введите логин" />
+                                        <EntryCell Label="Пароль" Keyboard="Default" Placeholder="Введите пароль" />
+                                        -->
+                        <!--<SwitchCell Text="Сохранить" />-->
+                        <!--
+                                    </TableSection>
+                                </TableRoot>
+                            </TableView.Root>
+                        </TableView>
+                        <Button Text="Войти" Clicked="btnSave"></Button>--><!--
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Label Text="Page"></Label>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>-->
+    <!--<StackLayout>
+        -->
+    <!--<Label x:Name="lbl" Text="Hello"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <Label Text="Первая метка" TextColor="Red"  />
+        <Label Text="Вторая метка" TextColor="Blue" />
+        <Label Text="Третья метка" TextColor="Green" />
+        <Button Text="Change" Clicked="Button_Clicked" />
+        <ListView>
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>iPhone X</x:String>
+                    <x:String>Samsung Galaxy S10</x:String>
+                    <x:String>Nokia 9</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+        </ListView>-->
+    <!--<x:Name="stackLayout" Spacing="8" Orientation="Horizontal">-->
+    <!--
+   
+    </StackLayout>-->
+
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.UserProfile"
+             Title="Профиль пользователя">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Margin" Value="8,8,0,8"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Keyboard" Value="Numeric"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame CornerRadius="8" Margin="16">
+                <StackLayout>
+                    <StackLayout>
+                        <Label Text="Настройки"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                    </StackLayout>
+                    <StackLayout>
+                        <ImageButton
+                                Source="home.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="StartAndExpand"
+                                Clicked="Home_Clicked"
+                           />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="username"
+                    Text="Имя пользователя:"/>
+                        <Entry x:Name="Name" Keyboard="Chat"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="login"
+                    Text="Логин:"/>
+                        <Entry x:Name="Username" IsReadOnly="True"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label x:Name="phone"
+                    Text="Телефон:"/>
+                        <Entry x:Name="Phone" Keyboard="Telephone" TextChanged="Phone_Changed"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Button Text="Изменить" 
+                                BackgroundColor="#f1cbff" CornerRadius="8" TextColor="White" HorizontalOptions="End"
+                                VerticalOptions="EndAndExpand" HeightRequest="48" Clicked="Change_Clicked"/>
+                    </StackLayout>
+                    <StackLayout>
+                        <Button Text="Удалить" 
+                                BackgroundColor="#f1cbff" CornerRadius="8" TextColor="White" HorizontalOptions="End"
+                                VerticalOptions="EndAndExpand" HeightRequest="48" Clicked="Delete_Clicked"/>
+                    </StackLayout>
+                </StackLayout>
+               
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App.Profile"
+             Title="Профиль питомца">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Margin" Value="8,8,0,8"/>
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="Keyboard" Value="Numeric"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Medium"/>
+                <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame CornerRadius="8" Margin="16">
+                    <StackLayout  BackgroundColor="White">
+                        <StackLayout>
+                            <ImageButton
+                                Source="home.png"
+                    HorizontalOptions="EndAndExpand"
+                    VerticalOptions="StartAndExpand"
+                                Clicked="Home_Click"
+                           />
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="Профиль"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Кличка:"/>
+                            <Entry x:Name="Name" Keyboard="Default"/>
+                        </StackLayout>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Порода:"/>
+                            <Entry x:Name="Breed" Keyboard="Text"/>
+                        </StackLayout>
+                        
+                     
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Вес(в кг):"/>
+                            <Entry x:Name="Weight" Keyboard="Numeric" Unfocused="WeightValue"/>
+                        </StackLayout>
+                        <Label x:Name="WeightInfo" TextColor="Default" FontSize="Default" 
+                               Text="Вес должен быть положительным и не превышать 150 кг."
+                               FontAttributes="Italic"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Возраст:"/>
+                            <Entry x:Name="Age" Keyboard="Default" Unfocused="AgeValue"/>
+                        </StackLayout>
+                        <Label x:Name="AgeInfo" TextColor="Default" FontSize="Default" 
+                               Text="Необходимо ввести данные в таком формате: ГГГГ-ММ-ДД."
+                               FontAttributes="Italic"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="Пол:"/>
+                            <Picker x:Name="Picker1" Margin="8,0">
+                                <Picker.Items>
+                                    <x:String>Женский</x:String>
+                                    <x:String>Мужской</x:String>
+                                </Picker.Items>
+                            </Picker>
+                        </StackLayout>
+                        <Button Text="Сохранить" 
+                                BackgroundColor="#f1cbff" CornerRadius="8" TextColor="White" HorizontalOptions="End"
+                                VerticalOptions="EndAndExpand" HeightRequest="48" Clicked="Save_Clicked"/>
+                        <Button Text="Изменить" 
+                                BackgroundColor="#f1cbff" CornerRadius="8" TextColor="White" HorizontalOptions="End"
+                                VerticalOptions="EndAndExpand" HeightRequest="48" Clicked="Change_Click"/>
+                        <Button Text="Удалить" 
+                                BackgroundColor="#f1cbff" CornerRadius="8" TextColor="White" HorizontalOptions="End"
+                                VerticalOptions="EndAndExpand" HeightRequest="48" Clicked="Delete_Click"/>
+
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
